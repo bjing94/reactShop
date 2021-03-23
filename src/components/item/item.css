@@ -1,0 +1,71 @@
+.item{
+    display: grid;
+    grid-template-rows: 7fr 1fr 1fr;
+    position: relative;
+    width:270px;
+    height: 498px;
+    /* width:300px;
+    height: 550px; */
+    border: solid 1px white;
+    border-radius: 10px;
+    overflow: hidden;
+
+    flex-shrink: 0;
+    
+}
+
+.item-buy-panel{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width:100%;
+    height: 100%;
+    background-color:transparent;
+}
+
+.item-buy-panel:hover {
+   
+    background-color:rgba(0, 0, 0, 0.7);
+}
+.item-buy-panel .rounded-button{
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: none;
+}
+.item-buy-panel:hover .rounded-button{
+    display: block;
+}
+.item-image{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(transparent,#141111 90%),url("https://upload.wikimedia.org/wikipedia/en/0/05/Call_of_Duty_Black_Ops_II_box_artwork.png");
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.item-text{
+    display: flex;
+    padding: 5px;
+    color:white;
+  
+    letter-spacing: -.04em;
+}
+
+.item.sm{
+    display: grid;
+    grid-template-rows: 7fr 1fr 1fr;
+    position: relative;
+    width:120px;
+    height: 222px;
+    font-size: 10px;
+    border: solid 1px white;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    
+}
+.item.sm .price-container{
+    font-size: 10px;
+}

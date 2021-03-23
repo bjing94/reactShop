@@ -1,0 +1,13 @@
+html, body, #app, #app>div {
+    height: 100%;
+    width:100%;
+    margin:0;
+    background-color:#141111;
+    
+    font-family: 'Noto Sans JP';
+  }
+
+@font-face{
+  font-family: 'Noto Sans JP', sans-serif;
+  
+}

@@ -1,0 +1,48 @@
+.full-slider-wrapper{
+    position: relative;
+    width:100%;
+    height:800px;
+    overflow: hidden;
+    background:linear-gradient(transparent,#141111 90%);
+}
+.full-slider-cover{
+    position: absolute;
+    display: grid;
+    grid-template-rows: 2fr 5fr 1fr;
+    grid-template-columns: 1fr 1fr 9fr;
+    width:100%;
+    height:100%;
+    background:linear-gradient(transparent,#141111 90%);
+    top:0;
+}
+.full-slider{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    height:5000px;
+    transition: all ease-in-out 1s;
+}
+.full-slider-item{
+    width:100%;
+    height:800px;
+    background:url("https://images5.alphacoders.com/927/thumb-1920-927025.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+
+.full-slider-item-description-container{
+    position: absolute;
+    display:grid;
+    grid-template-rows: auto;
+    row-gap: 50px;
+    width:500px;
+    height:fit-content;
+    font-size: 40px;
+    left:100px;
+    top:300px;
+    color:white;
+    font-weight: bold;
+}
+

@@ -1,0 +1,31 @@
+.slick-slider-wrapper{
+    display: grid;
+    grid-auto-rows: min-content;
+    row-gap: 10px;
+    width:100%;
+    overflow: hidden;
+}
+.slick-slider-tabs{
+    display: grid;
+    grid-auto-columns: min-content;
+    column-gap: 10px;
+    width:100%;
+    height: auto;
+}
+.slick-slider-tab{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    border:solid 1px white;
+    font-size: 15px;
+    padding:5px;
+    
+}
+.slick-slider-container{
+    display: grid;
+    grid-auto-columns: min-content;
+    column-gap: 10px;
+    width:2000px;
+    height: auto;
+    
+}

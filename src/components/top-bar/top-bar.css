@@ -1,0 +1,35 @@
+.top-bar{
+    position: fixed;
+    display:grid;
+    align-items: center;
+    grid-column-gap: 20px;
+    grid-template-columns: 1fr 2fr  1fr;
+    padding-top: 10px;
+    height:80px;
+    width:100%;
+    z-index: 3;
+    background:linear-gradient(rgba(0, 0, 0, 0.87) 10%,transparent 90%);
+}
+.top-bar-logo{
+    width:40px;
+    height: 40px;
+    margin-left:160px;
+    background-image: url("https://cdn.freebiesupply.com/images/large/2x/steam-logo-black-transparent.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.top-bar-search-container{
+    display: inline-grid;
+    grid-template-columns: auto;
+    grid-auto-flow: column;
+    width: fit-content;
+    column-gap: 10px;
+    align-items:center;
+}
+.top-bar-icon-container{
+    display: inline-grid;
+    grid-template-columns: auto;
+    grid-auto-flow: column;
+    width: fit-content;
+    column-gap: 10px;
+}

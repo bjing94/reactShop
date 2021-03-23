@@ -1,0 +1,41 @@
+.price-container{
+    position: relative;
+    display: inline-flex;
+    height: auto;
+
+    align-items: center;
+    justify-content: space-between;
+    padding:5px;
+    color:white;
+    font-size: 18px;
+
+}
+.price{
+    position: relative;
+    font-weight: bold;
+    
+    color:white;
+}
+.price.discounted{
+    text-decoration: line-through;
+}
+.new-price{
+    position: relative;
+    
+    left:5px;
+    color:gray;
+}
+.discount-block{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background-color: #ee2560;
+    color:white;
+    height:fit-content;
+    width:fit-content;
+    
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+}

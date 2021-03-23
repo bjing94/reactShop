@@ -1,0 +1,31 @@
+.switch-container{
+    display: grid;
+    width:fit-content;
+    grid-auto-columns: auto;
+    column-gap: 5px;
+    grid-auto-flow: column;
+}
+.switch-box{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border:solid 1px white;
+    width:20px;
+    height:20px;
+    
+    
+}
+.switch-box-inner{
+    width:14px;
+    height: 14px;
+    
+    background:none;
+}
+.switch-box-inner.active{
+
+    background-color:white;
+}
+.switch-text{
+    color:white;
+    font-size: 14px;
+}

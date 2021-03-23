@@ -1,0 +1,59 @@
+.comment-section-container{
+    display: grid;
+    grid-auto-rows: min-content;
+
+}
+.comment-container{
+    display: grid;
+    padding-top:10px;
+    grid-template-columns: auto 1fr;
+    column-gap: 5px;
+    width:100%;
+   height: fit-content;
+    min-height: 100px;
+ 
+}
+.comment-container:not(:last-child){
+   border-bottom:solid 1px white;
+}
+.comment-content{
+    display: grid;
+    grid-auto-rows: min-content;
+    height: fit-content;
+}
+.comment-author{
+    font-size:20px;
+    color:orangered;
+}
+.comment-time{
+    font-size: 10px;
+    color:gray;
+}
+.comment-text{
+    font-size: 15px;
+}
+.comment-icon{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url("https://i.etsystatic.com/6417031/r/il/754db4/1488568565/il_570xN.1488568565_73ls.jpg"),linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255));
+    background-position: center center;
+    background-size: 150%;
+}
+.comment-like{
+    
+    display: grid;
+    grid-auto-columns: min-content;
+    column-gap: 10px;
+    grid-auto-flow: column;
+}
+.comment-like-heart{
+    width:20px;
+    height: 20px;
+    background-image: url("http://cdn.onlinewebfonts.com/svg/img_531651.png"),linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255));;
+    border-radius: 50%;
+    background-size: contain;
+}
+.comment-like-value{
+    font-size: 10px;
+}
