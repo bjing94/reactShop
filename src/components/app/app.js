@@ -5,7 +5,7 @@ import MainWrapper from "../main-wrapper";
 import MainPage from "../main-page";
 import TestPage from "../test-page";
 import ProductPage from "../product-page";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter  as Router, Switch, Route } from "react-router-dom";
 import BottomInfo from "../bottom-info";
 import Catalogue from "../catalogue";
 
