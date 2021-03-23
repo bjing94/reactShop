@@ -137,6 +137,9 @@ const items=[
         releaseDate:"21 августа 2012 ",
         developer:"Valve",
         publisher:"Microsoft Game Studios",
+        region:"Россия",
+        service:"Steam",
+        languageSupport:true,
         similiarGames:[
            
         ],
@@ -185,6 +188,9 @@ const items=[
         releaseDate:"3 марта 2020",
         developer:"Bungie",
         publisher:"Microsoft Game Studios",
+        region:"Россия",
+        service:"Steam",
+        languageSupport:false,
         similiarGames:[
             "halo_1",
             "halo_2",
@@ -235,6 +241,9 @@ const items=[
         releaseDate:"12 мая 2020",
         developer:"Bungie",
         publisher:"Microsoft Game Studios",
+        region:"Россия",
+        service:"Steam",
+        languageSupport:true,
         similiarGames:[
             "halo_1",
             "halo_2",
@@ -285,6 +294,9 @@ const items=[
         releaseDate:"14 июля 2020",
         developer:"Bungie",
         publisher:"Microsoft Game Studios",
+        region:"Россия",
+        service:"Steam",
+        languageSupport:true,
         similiarGames:[
             "halo_1",
             "halo_2",
@@ -335,6 +347,9 @@ const items=[
         releaseDate:"3 декабря 2019 ",
         developer:"Bungie",
         publisher:"Microsoft Studios",
+        region:"Россия",
+        service:"Steam",
+        languageSupport:true,
         similiarGames:[
             "halo_1",
             "halo_2",
@@ -385,6 +400,9 @@ const items=[
         releaseDate:"17 ноября 2020 ",
         developer:"343 Industries",
         publisher:"Microsoft Studios",
+        region:"Россия",
+        service:"Steam",
+        languageSupport:true,
         similiarGames:[
             "halo_1",
             "halo_2",
@@ -435,6 +453,9 @@ const items=[
         releaseDate:"5 марта 2013",
         developer:"Crystal Dynamics",
         publisher:"Square Enix",
+        region:"Россия",
+        service:"Steam",
+        languageSupport:true,
         similiarGames:[
             "halo_1",
             "halo_2",
@@ -485,6 +506,9 @@ const items=[
         releaseDate:"28 января 2016 ",
         developer:"Crystal Dynamics",
         publisher:"Square Enix",
+        region:"Россия",
+        service:"Steam",
+        languageSupport:true,
         similiarGames:[
            
         ],
@@ -535,6 +559,9 @@ const items=[
         releaseDate:"15 марта 2018 ",
         developer:"Eidos Montreal",
         publisher:"Square Enix",
+        region:"Россия",
+        service:"Steam",
+        languageSupport:true,
         similiarGames:[
         ],
         gallery:[
@@ -582,6 +609,9 @@ const items=[
         releaseDate:"8 сентября 2010 ",
         developer:"Frictional Games",
         publisher:"Frictional Games",
+        region:"Россия",
+        service:"Steam",
+        languageSupport:true,
         similiarGames:[
             "penumbra",
             "outlast",
@@ -632,6 +662,9 @@ const items=[
         releaseDate:"2007 год",
         developer:"Frictional Games",
         publisher:"Paradox Interactive",
+        region:"Россия",
+        service:"Steam",
+        languageSupport:false,
         similiarGames:[
             "amnesia_the_dark_descent",
             "outlast",
@@ -682,6 +715,9 @@ const items=[
         releaseDate:"4 сентября 2013 ",
         developer:"Red Barrels",
         publisher:"Red Barrels",
+        region:"Россия",
+        service:"Steam",
+        languageSupport:true,
         similiarGames:[
             "penumbra",
             "amnesia_the_dark_descent",
@@ -732,6 +768,9 @@ const items=[
         releaseDate:"29 октября 2015",
         developer:"Red Barrels",
         publisher:"Red Barrels",
+        region:"Россия",
+        service:"Steam",
+        languageSupport:true,
         similiarGames:[
             "penumbra",
             "outlast",
