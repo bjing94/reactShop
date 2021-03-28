@@ -11,7 +11,8 @@ class AwesomeDropdown extends Component {
     this.defaultVal=props.defaultVal;
     this.state = {
       active: false,
-      activeCategories: this.defaultVal,
+
+      innerActiveCategories: this.defaultVal,
     };
     
 
@@ -21,26 +22,26 @@ class AwesomeDropdown extends Component {
   handleClick(category, isMultiple) {
 
     const {onChangeValue}=this.props;
-    const {activeCategories}=this.state;
+    const {innerActiveCategories}=this.state;
     let newCategories=[];
     if (isMultiple) {
-      if (activeCategories.includes(category)) {
-        let idx = activeCategories.indexOf(category);
+      if (innerActiveCategories.includes(category)) {
+        let idx = innerActiveCategories.indexOf(category);
         
-         newCategories = [...activeCategories.slice(0,idx),...activeCategories.slice(idx+1)];
+         newCategories = [...innerActiveCategories.slice(0,idx),...innerActiveCategories.slice(idx+1)];
         
       } else {
-         newCategories = [...activeCategories, category];
+         newCategories = [...innerActiveCategories, category];
 
         
       }
-      this.setState(({ activeCategories }) => {
-          return { activeCategories: newCategories };
+      this.setState(({ innerActiveCategories }) => {
+          return { innerActiveCategories: newCategories };
       });
     } else {
       newCategories = [category];
-      this.setState(({ activeCategories }) => {
-        return { activeCategories: newCategories };
+      this.setState(({ innerActiveCategories }) => {
+        return { innerActiveCategories: newCategories };
       });
     }
 
@@ -61,7 +62,7 @@ class AwesomeDropdown extends Component {
       onClick,
       categories,
       itemType,
-      
+      activeCategories=null
     } = this.props;
 
     const styles = {
@@ -69,7 +70,9 @@ class AwesomeDropdown extends Component {
       fontSize: `${fontSize}px`,
     };
 
-    const { active, activeCategories } = this.state;
+    
+    const { active, innerActiveCategories } = this.state;
+    const displayActiveCategories = activeCategories===null ? innerActiveCategories : activeCategories;
     const activeClass = active ? "" : " hidden";
 
     let elements = [];
@@ -77,7 +80,7 @@ class AwesomeDropdown extends Component {
     switch (itemType) {
       case "switch":
         elements = categories.map((category) => {
-          const switchActive = activeCategories.includes(category.value)
+          const switchActive = displayActiveCategories.includes(category.value)
             ? "active"
             : null;
           
@@ -96,7 +99,7 @@ class AwesomeDropdown extends Component {
         break;
       default:
         elements = categories.map((category) => {
-          if(activeCategories.includes(category.value)){
+          if(displayActiveCategories.includes(category.value)){
             buttonText=category.name;
           }
           return (

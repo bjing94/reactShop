@@ -1,7 +1,6 @@
 import {
     SearchButton,
-    CategoryButton,
-    DropDownButton,
+
     AwesomeButton,
     PanelButton,
     CircleButton
@@ -9,8 +8,7 @@ import {
 } from './buttons';
 export {
     SearchButton,
-    CategoryButton,
-    DropDownButton,
+
     AwesomeButton,
     PanelButton,
     CircleButton

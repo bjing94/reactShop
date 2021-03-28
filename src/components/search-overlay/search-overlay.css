@@ -1,0 +1,35 @@
+.search-overlay-container{
+    display: none;
+    grid-auto-flow:row;
+    justify-content: flex-start;
+    position: fixed;
+    right:0;
+    top:0;
+    height:1080px;
+    width:1200px;
+    padding-top: 100px;
+    padding-bottom:50px;
+    padding-right: 200px;
+    padding-left:50px;
+    background-color:rgba(0, 0, 0, 0.884);
+   grid-auto-rows: min-content;
+    column-gap: 60px;
+    row-gap: 30px;
+    z-index:-1;
+}
+.search-overlay-grid{
+    display: grid;
+    grid-auto-flow:row;
+    justify-content: flex-start;
+    position: relative;
+    height:100%;
+    width:1150px;
+    grid-template-columns: repeat(auto-fit,200px);
+    grid-auto-rows: fit-content;
+    column-gap: 60px;
+    row-gap: 30px;
+    z-index:-1;
+}
+.search-overlay-container.active{
+    display:grid;
+}

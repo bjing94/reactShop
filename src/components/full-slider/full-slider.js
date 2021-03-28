@@ -1,8 +1,20 @@
 import React, { Component } from "react";
-import ScrollBar from '../scroll-bar';
+import { AwesomeButton } from "../buttons";
+import Price from "../price";
+import ScrollBar from "../scroll-bar";
 import "./full-slider.css";
 
-
+const SliderName = (props) => {
+  const { name, price, discount } = props;
+  
+  return (
+    <div className="slider-name-container" >
+      <div className="slider-name">{name}</div>
+      <Price price={price} discount={discount} />
+      <AwesomeButton bStyle={"action"}>Купить</AwesomeButton>
+    </div>
+  );
+};
 class FullSlider extends Component {
   constructor(props) {
     super(props);
@@ -10,7 +22,8 @@ class FullSlider extends Component {
       translateY: 0,
       currId: 0,
     };
-    this.items = [1, 2, 3, 4, 5];
+    this.items = props.items;
+    this.getItem=props.getItem;
 
     this.setSlide = this.setSlide.bind(this);
     this.changeSlide = this.changeSlide.bind(this);
@@ -31,7 +44,7 @@ class FullSlider extends Component {
     });
   }
   setSlide(id) {
-    if (id < this.items.length - 1 && id >= 0) {
+    if (id <= this.items.length - 1 && id >= 0) {
       this.setState({
         currId: id,
       });
@@ -56,22 +69,20 @@ class FullSlider extends Component {
   }
   render() {
     const items = this.items;
+
     const { currId } = this.state;
-    const elements = items.map((element,idx) => {
-      return <div className="full-slider-item" key={"slide "+idx}></div>;
-    });
-    const scrollBarItems = items.map((element, idx) => {
-      let classNames = "full-slider-scroll-bar-item";
-      if (idx === currId) {
-        classNames += " active";
+    const elements = items.map((itemId, idx) => {
+      const item=this.getItem(itemId);
+      const styles={
+        backgroundImage:`url(${item.gallery[0]})`
       }
       return (
-        <div
-          className={classNames}
-          onClick={() => {
-            this.setSlide(idx);
-          }}
-        ></div>
+        <div className="full-slider-item" key={"slide " + idx} style={styles}> 
+          <SliderName  price={item.price} 
+          discount={item.discount} 
+          name={item.name} 
+          src={item.gallery[0]}/>
+        </div>
       );
     });
     const styles = {
@@ -82,35 +93,19 @@ class FullSlider extends Component {
         <div className="full-slider" style={styles}>
           {elements}
         </div>
-        <div className="full-slider-cover">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <ScrollBar
-          currId={currId}
-          numberOfPages={items.length}
-          onClickTop={()=>{this.setSlide(currId-1)}}
-          onClickBottom={()=>{this.setSlide(currId+1)}}/>
-          {/* <ProductName
-            name={"Warhammer: Vermintide II"}
-            price={120}
-            discount={10}
-            marginLeft={250}
-            marginTop={300}
-            paddingButton={20}
-            buttonFontSize={20}
-            fontSize={30}
-            priceFontSize={20}
-            gap={5}
-            priceWidth={150}
-          /> */}
+        <div className="full-slider-scroll">
+        <ScrollBar
+            currId={currId}
+            numberOfPages={items.length}
+            onClickTop={() => {
+              this.setSlide(currId - 1);
+            }}
+            onClickBottom={() => {
+              this.setSlide(currId + 1);
+            }}
+          />
         </div>
-        </div>
-          
-         
-        
-    
+      </div>
     );
   }
 }

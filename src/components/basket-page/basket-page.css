@@ -1,0 +1,107 @@
+.basket-container{
+    display:grid;
+    grid-auto-rows: fit-content;
+    grid-auto-flow:row;
+    row-gap: 20px;
+    
+
+}
+.basket-item-image{
+    height:150px;
+    width:110px;
+    border-radius: 10px;
+    box-shadow:0px 2px 2px rgba(0, 0, 0, 0.7);
+}
+.basket-item-info{
+    display: grid;
+    grid-auto-rows: auto;
+   
+}
+.basket-item-container{
+    
+    display: grid;
+    grid-template-columns: auto 1fr ;
+    column-gap: 20px;
+    justify-content: flex-start;
+    align-items:flex-start;
+    grid-auto-flow:column;
+    border-top: solid 1px white;
+    border-bottom:solid 1px white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.basket-item-row{
+    display: grid;
+    width:100%;
+    height:auto;
+    justify-content: flex-start;
+    grid-auto-columns:auto;
+    grid-auto-flow: column;
+    column-gap: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom:transparent 1px gray;
+}
+.basket-item-row.line{
+    
+    border-bottom:solid 1px gray;
+}
+.basket-item-additional{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    width:auto;
+    height: auto;
+    color:white;
+}
+.basket-item-additional-value{
+    color:orangered;
+}
+.basket-item-title{
+    color:white;
+    font-size: 20px;
+}
+.basket-page-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    padding-top: 100px;
+}
+.basket-title{
+    color:white;
+    font-size: 40px;
+}
+.basket-title-count{
+    color:orangered;
+    font-size: 40px;
+}
+.total-container{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 20px;
+    width:400px;
+    height:200px;
+    padding:30px;
+    background-color:black;
+    border:solid 1px white;
+    border-radius: 25px;
+    margin-top: 100px;
+}
+.total-title{
+    font-size: 25px;
+    color:white;
+}
+.total-price{
+    font-size: 25px;
+    color:orangered;
+}
+.total-row{
+    display: inline-flex;
+    justify-content: space-between;
+}
+.delete-cross{
+    justify-self: flex-end;
+    width:40px;
+    height:40px;
+    /* background-image: url(""); */
+    background-color:red;
+}

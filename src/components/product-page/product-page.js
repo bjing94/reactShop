@@ -107,21 +107,20 @@ const systemRequirements = [
     value: "45 GB",
   },
 ];
-const screenshots = [
-  "https://external-preview.redd.it/6r7p6fa9B58O5wdRTpiA5mrp5SgUqYIVdzw3SbWlMA8.jpg?auto=webp&s=54f54f151bc06064567e27d4dd4c25d874d2d546",
-  "https://i.imgur.com/k2CPj2d.png",
-  "https://gamespot1.cbsistatic.com/uploads/scale_landscape/1179/11799911/3664795-halo3.jpg",
-];
+
 
 const ProductPage = (props) => {
   //organize elements you know
-  const { getItem, match } = props;
+  const { getItem, match,addToBasket } = props;
   const id = match.params.id;
   const item = getItem(id);
   const { name, price, discount, 
     requirements, src,descr,
     genres,similiarGames,releaseDate,
-    publisher,developer,platform,gallery,inStock } = item;
+    publisher,developer,platform,gallery,inStock,
+    region,
+    service,
+    languageSupport, } = item;
 
   let textGenres = "";
 
@@ -135,6 +134,7 @@ const ProductPage = (props) => {
   })
   const similiarGamesSlider = similiarGames.length>0 ? <AwesomeSlider items={similiarGamesItems}  key={"slider "+id}>Похожие игры</AwesomeSlider> : null;
   const stockText = inStock ? "В наличии" : "Отсутствует";
+  const languageSupportText = languageSupport ? "Есть" : "Нет";
   return (
     <div className="product-container">
       
@@ -148,15 +148,15 @@ const ProductPage = (props) => {
             <ProductTag  key={"tag1 "+id}>{stockText}</ProductTag>
           </ProductRow>
           <ProductRow>
-            <AwesomeButton bStyle={"action"} width={140} height={35}>
+            <AwesomeButton bStyle={"action"} width={140} height={35} onClick={()=>{addToBasket(id)}}>
               В корзину
             </AwesomeButton>
             <ProductPrice  key={"price "+id} price={price} discount={discount} />
           </ProductRow>
           <ProductRow>
-            <ProductSubInfo key={"sub1 "+id} name={"Русский язык"} value={"Есть"} />
-            <ProductSubInfo key={"sub2 "+id} name={"Регион активации"} value={"Россия"} />
-            <ProductSubInfo key={"sub3 "+id} name={"Сервис активации"} value={"Steam"} />
+            <ProductSubInfo key={"sub1 "+id} name={"Русский язык"} value={languageSupportText} />
+            <ProductSubInfo key={"sub2 "+id} name={"Регион активации"} value={region} />
+            <ProductSubInfo key={"sub3 "+id} name={"Сервис активации"} value={service} />
           </ProductRow>
         </ProductLargeCol>
       </ProductRow>
@@ -251,6 +251,7 @@ const ProductPage = (props) => {
           />
         </ProductLargeCol>
       </ProductRow>
+      
     </div>
   );
 };

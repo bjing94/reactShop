@@ -4,13 +4,14 @@ import {useState} from "react";
 
 import "./search-panel.css";
 
-const SearchPanel = () => {
-  const [text,setText]=useState("");
+const SearchPanel = (props) => {
   
+  const {setSearchName}=props;
   return (
     <div className="search-panel-container">
         
-      <input className="search-panel" onChange={(target)=>{setText(target.value)}} value={text}/>
+      <input className="search-panel"  onChange={(evt)=>{setSearchName(evt.target.value)}}
+      onClick={(evt)=>{setSearchName(evt.target.value)}}/>
       <SearchButton/>
     </div>
   );

@@ -19,27 +19,9 @@
   color: black;
   border-color: white;
 }
-.category-button.dropdown:hover {
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
-  background-color: #5a0d96;
-}
-.category-button.dropdown {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  width: 180px;
-  border: 0;
 
-  background-color: #3a085f;
-  color: white;
-  font-size: 15px;
-}
-.dropdown-wrapper {
-  display: block;
-}
 .awesome-button {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,6 +118,11 @@
   color: black;
   border: solid 3px orangered;
   background-color: orangered;
+}
+.action.active{
+  color: black;
+  border: solid 3px white;
+  background-color: white;
 }
 .action:hover {
   color: black;

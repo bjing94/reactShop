@@ -1,5 +1,5 @@
 import React, { Component,useState } from 'react';
-import DropDownList from '../dropdown-list';
+
 import './buttons.css';
 
 
@@ -15,62 +15,10 @@ const SearchButton=(props)=>{
 
 
 
-const CategoryButton=(props)=>{
-    const text=props.children;
-    const {active,onClick,id} = props;
-    let classNames="category-button";
-
-    if(active)
-    {
-        classNames+=" active";
-    }
-    return(
-        <button className={classNames}
-        onClick={onClick}
-        id={id}>
-            {text}
-        </button>
-    )
-}
 
 
 
-class DropDownButton extends Component{
-    constructor()
-    {
-        super();
 
-        this.state={
-            isActive:false
-        }
-
-        this.handleClick=this.handleClick.bind(this);
-    }
-
-    handleClick()
-    {
-        this.setState({isActive:!this.state.isActive});
-    }
-    render()
-    {
-        const {isActive}=this.state;
-        const {getList} = this.props;
-        const dropDownList = isActive ? <DropDownList getData={getList}/> : null;
-        const text=this.props.children;
-        return(
-            <div className="dropdown-wrapper">
-
-            
-            <button className="category-button dropdown" 
-            onClick={this.handleClick}>
-            {text}
-        </button>
-            {dropDownList}
-        </div>
-        )
-    }
-
-}
 
 
 
@@ -144,8 +92,6 @@ const CircleButton=(props)=>{
 }
 export {
     SearchButton,
-    CategoryButton,
-    DropDownButton,
     AwesomeButton,
     PanelButton,
     CircleButton

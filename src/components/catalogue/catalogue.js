@@ -20,7 +20,7 @@ const Catalogue = (props)=>{
         const elements=items.map((item,idx)=>{
             return(
               
-                <Link to={`/category/${item.value}`} style={{ textDecoration: 'none' }} key={"link "+idx}>      
+                <Link to={`/search/${item.value}`} style={{ textDecoration: 'none' }} key={"link "+idx}>      
                     <CatalogueItem text={item.name} idx={idx} key={"item "+idx} />
                 </Link>
             )
@@ -45,9 +45,9 @@ const Catalogue = (props)=>{
     })
     return(
         <div className={`catalogue-container ${activeClass}`}>
-            <div className="catalogue-column" key={"specialCategory "}>
+            {/* <div className="catalogue-column" key={"specialCategory "}>
                 {specialElements}
-            </div>
+            </div> */}
             {columns}
         </div>
     )

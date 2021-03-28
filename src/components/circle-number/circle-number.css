@@ -1,0 +1,10 @@
+.circle-number{
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orangered;
+    right:-10px;
+    transform: translateY(100%);
+    border-radius: 50%;
+}

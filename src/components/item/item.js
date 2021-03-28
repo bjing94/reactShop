@@ -36,8 +36,8 @@ fontSize=18}=props;
             <div className="item-buy-panel">
                 <Link to={`/item/${id}`} style={{ textDecoration: 'none' }}>
                 
-                   <AwesomeButton width={width/2} height={height/10} fontSize={fontSize}>
-                       BUY</AwesomeButton>
+                   <AwesomeButton width={width/2} height={height/10} fontSize={fontSize} bStyle={"action"}>
+                       КУПИТЬ</AwesomeButton>
                  </Link>
             </div>
         </div>
