@@ -11,7 +11,6 @@ import CataloguePage from "../catalogue-page";
 import BasketPage from "../basket-page";
 
 import "./app.css";
-import SearchOverlay from "../search-overlay";
 class App extends Component {
   constructor() {
     super();

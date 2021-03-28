@@ -12,7 +12,7 @@ class CataloguePage extends Component {
     this.matchId = props.match.params.id;
 
     let defaultFilter = {
-      name: null,
+      name: "",
       minPrice: 0,
       maxPrice: 100000,
       inStock: true,
@@ -133,7 +133,7 @@ class CataloguePage extends Component {
   }
   resetFilter() {
     let newFilter = {
-      name: null,
+      name: "",
       minPrice: 0,
       maxPrice: 100000,
       inStock: true,
@@ -149,7 +149,7 @@ class CataloguePage extends Component {
   componentWillReceiveProps(nextProps) {
     if (this.matchId != nextProps.match.params.id) {
       let newFilter = {
-        name: null,
+        name: "",//
         minPrice: 0,
         maxPrice: 100000,
         inStock: true,
